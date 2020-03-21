@@ -69,14 +69,14 @@ app.get('/weather', (req, res) => {
                 return res.send({ error })
             } 
             
-                forecast(latitude, longitude, (error, forcastData) => {
+                forecast(latitude, longitude, (error, forecastData) => {
                     if (error) {
                         return res.send({ error })
                     }
             
                     
                     res.send({
-                        forecast: forcastData,
+                        forecast: forecastData,
                         location,
                         address: req.query.address
                     })
